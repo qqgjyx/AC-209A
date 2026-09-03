@@ -1,0 +1,11 @@
+# Course repo cloned in-place, tracked upstream at Harvard-CS1090/2026-CS1090A-public
+2026-CS1090A-public/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/

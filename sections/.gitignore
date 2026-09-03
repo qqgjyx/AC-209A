@@ -1,8 +1,7 @@
-# macOS
 .DS_Store
-
-# Python
+.env
 __pycache__/
-*.py[cod]
-.venv/
+__MACOSX/
+*.pyc
 .ipynb_checkpoints/
+.venv/

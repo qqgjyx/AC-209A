@@ -6,4 +6,3 @@ __pycache__/
 *.py[cod]
 .venv/
 .ipynb_checkpoints/
-uv.lock

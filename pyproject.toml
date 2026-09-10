@@ -21,7 +21,9 @@ dependencies = [
     "numpy>=2.3,<3",
     "scipy>=1.16,<2",
     "matplotlib>=3.10,<4",
-    "pandas>=2.3,<3",
+    # Section 02 onward the course requires pandas 3 (sections/sec02 pins
+    # >=3,<4). hw0 stays on 2.x through its own pinned project file.
+    "pandas>=3,<4",
     "otter-grader>=7,<8",
     "jupyterlab>=4",
     "jupyter>=1.1",

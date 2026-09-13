@@ -38,11 +38,12 @@ dependencies = [
     "lxml",
     "httpx>=0.28",
     "aiohttp",
-    "pyarrow>=21",
+    # Upper bounds match homeworks/cs1090a_hw1, which caps both.
+    "pyarrow>=21,<24",
     "openpyxl",
     "duckdb>=1.5",
     "polars>=1.40",
-    "plotly>=6.0",
+    "plotly>=6,<7",
     # notebook tooling
     "ipywidgets",
     "jupytext",

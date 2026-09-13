@@ -1,0 +1,10 @@
+# environment.yml
+name: cs1090a-hw1
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12  # Specify a python version
+  - pip         # Make sure pip itself is installed by conda
+  - pip:
+    - -r requirements.txt # This tells pip to install from your file

@@ -1,0 +1,28 @@
+# CS1090A HW1 environment — laptop setup via uv (https://docs.astral.sh/uv/):
+#   uv sync            # creates .venv with these pinned-compatible versions
+#   uv run jupyter lab
+# This mirrors the course JupyterHub environment (verified July 2026 on
+# Python 3.12). Upper bounds prevent September releases from surprising you.
+[project]
+name = "cs1090a-hw1"
+version = "2026.0"
+description = "CS1090A Fall 2026 HW1 environment"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy>=2.3,<3",
+    "scipy>=1.16,<2",
+    "matplotlib>=3.10,<4",
+    "scikit-learn>=1.7,<2",
+    "otter-grader>=7,<8",
+    "jupyter>=1.1",
+    "jupyterlab>=4",
+    "requests>=2.32,<3",
+    "beautifulsoup4>=4.13,<5",
+    "pandas>=3,<4",
+    "seaborn>=0.13,<0.15",
+    "pyarrow>=21,<24",
+    "httpx>=0.28,<1",
+    "duckdb>=1.5,<2",
+    "polars>=1.40,<2",
+    "plotly>=6,<7",
+]

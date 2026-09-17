@@ -1,12 +1,7 @@
-# macOS
 .DS_Store
-
-# Python
+.env
 __pycache__/
-*.py[cod]
-.venv/
+__MACOSX/
+*.pyc
 .ipynb_checkpoints/
-
-# Otter / nbconvert export leftovers
-.OTTER_LOG
-*.html
+.venv/

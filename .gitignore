@@ -7,6 +7,9 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 
-# Otter / nbconvert export leftovers
+# Otter / nbconvert export leftovers.
+# Scoped to the assignment/section root so that scraped artifacts under
+# data/html/ (HW1 Q3 requires them) are still tracked.
 .OTTER_LOG
-*.html
+/homeworks/*/*.html
+/sections/*/*.html

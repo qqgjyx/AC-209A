@@ -13,3 +13,6 @@ __pycache__/
 .OTTER_LOG
 /homeworks/*/*.html
 /sections/*/*.html
+
+# Raw Wikipedia page cache (HW1 Q7): excluded from the submission and too big to track.
+/homeworks/*/data/wiki/

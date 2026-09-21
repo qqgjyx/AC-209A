@@ -1,0 +1,27 @@
+{
+ "(YEAR film)": {
+  "requests": 49,
+  "request_s": 6,
+  "wall_s": 2
+ },
+ "(film)": {
+  "requests": 36,
+  "request_s": 5,
+  "wall_s": 1
+ },
+ "bare": {
+  "requests": 46,
+  "request_s": 6,
+  "wall_s": 13
+ },
+ "search": {
+  "requests": 276,
+  "request_s": 89,
+  "wall_s": 39
+ },
+ "wikitext": {
+  "requests": 34,
+  "request_s": 10,
+  "wall_s": 5
+ }
+}

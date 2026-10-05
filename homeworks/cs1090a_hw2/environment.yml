@@ -1,0 +1,30 @@
+# environment.yml
+#
+# The pip packages are listed explicitly rather than as `- -r requirements.txt`.
+# Inside the Gradescope container that relative path does not resolve, pip exits 2,
+# and the image build dies under `set -e`. See
+# hw/hw1-materials/solutions/fix_autograder_env.py for the full account.
+#
+# Every pin carries an upper bound, matching pyproject.toml. Gradescope's generated
+# setup.sh installs from this file and ignores uv.lock, so a lower bound alone lets a new
+# major release into the container without touching the locked local build -- and the
+# container is the one nobody exercises until students submit to it.
+name: cs1090a-hw2
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12  # Specify a python version
+  - pip         # Make sure pip itself is installed by conda
+  - pip:
+    - numpy>=2.3,<3
+    - scipy>=1.16,<2
+    - pandas>=3.0,<4
+    - matplotlib>=3.10,<4
+    - seaborn>=0.13.2,<0.14
+    - scikit-learn>=1.7,<2
+    - otter-grader>=7,<8
+    - jupyter>=1.1,<2
+    - jupyterlab>=4,<5
+    - nbconvert>=7,<8
+    - nbformat>=5,<6

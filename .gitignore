@@ -16,3 +16,6 @@ __pycache__/
 
 # Raw Wikipedia page cache (HW1 Q7): excluded from the submission and too big to track.
 /homeworks/*/data/wiki/
+
+# Local secrets (API keys); never commit them.
+.env

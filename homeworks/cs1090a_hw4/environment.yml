@@ -1,0 +1,28 @@
+# environment.yml
+name: cs1090a-hw4
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12  # Specify a python version
+  - pip         # Make sure pip itself is installed by conda
+  # PyMC's backend (pytensor) compiles C at first use; the Gradescope container needs a
+  # compiler for that, and conda-forge's is the reliable way to get one.
+  - compilers
+  - pip:
+    # Listed explicitly rather than as `-r requirements.txt`: the Gradescope container
+    # does not place requirements.txt next to this file, so a `-r` line breaks its build.
+    - numpy>=2.3,<2.4
+    - numba>=0.62,<0.63
+    - scipy>=1.16
+    - pandas>=3
+    - matplotlib>=3.10
+    - seaborn>=0.13.2
+    - scikit-learn>=1.7
+    - pymc>=5.20,<6
+    - arviz>=0.20,<1
+    - otter-grader>=7,<8
+    - jupyter>=1.1
+    - jupyterlab>=4
+    - nbconvert>=7
+    - nbformat>=5

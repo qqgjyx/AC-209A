@@ -1,0 +1,44 @@
+# CS1090A HW4 environment — laptop setup via uv (https://docs.astral.sh/uv/):
+#   uv sync            # creates .venv with these pinned-compatible versions
+#   uv run jupyter lab
+# Upper bounds prevent a mid-semester release from surprising you.
+#
+# Two pins are load-bearing for PyMC and were measured on 2026-09-13: with numpy 2.5 the
+# resolver picks numba 0.63.0b1, which imports np.row_stack (removed in 2.5), and the first
+# pm.sample fails. numpy below 2.4 and numba below 0.63 resolve to versions that sample.
+[project]
+name = "cs1090a-hw4"
+version = "2026.0"
+description = "CS1090A Fall 2026 HW4 environment"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy>=2.3,<2.4",
+    "numba>=0.62,<0.63",
+    "scipy>=1.16,<2",
+    "pandas>=3,<4",
+    "matplotlib>=3.10,<4",
+    "seaborn>=0.13.2,<0.14",
+    "scikit-learn>=1.7,<2",
+    "pymc>=5.20,<6",
+    "arviz>=0.20,<1",
+    "otter-grader>=7,<8",
+    "jupyter>=1.1",
+    "jupyterlab>=4",
+    "nbconvert>=7",
+    "nbformat>=5",
+]
+
+# Optional: a coding assistant inside JupyterLab (the notebook-intelligence extension).
+# Nothing in this homework needs it, and it adds about 50 more packages, so uv installs
+# it only when you ask for it:
+#
+#   uv sync --extra ai-tools
+#
+# The assistant works by running the Claude Code command-line program, and this extra
+# does not give you a `claude` command. Install it separately
+# (curl -fsSL https://claude.ai/install.sh | bash) and check that typing `claude` in a
+# terminal starts it before you start JupyterLab.
+[project.optional-dependencies]
+ai-tools = [
+    "notebook-intelligence>=6.1,<7",
+]

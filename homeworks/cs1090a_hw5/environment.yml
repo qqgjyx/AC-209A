@@ -1,0 +1,23 @@
+# environment.yml
+name: cs1090a-hw5
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13  # the version uv.lock was resolved with
+  - pip         # Make sure pip itself is installed by conda
+  - pip:
+    # Exact versions from uv.lock, so the autograder's re-run uses what students run locally.
+    # Listed explicitly rather than as `-r requirements.txt`: the Gradescope container
+    # does not place requirements.txt next to this file, so a `-r` line breaks its build.
+    - numpy==2.5.5
+    - scipy==1.18.1
+    - pandas==3.1.1
+    - matplotlib==3.11.2
+    - seaborn==0.13.2
+    - scikit-learn==1.9.1
+    - otter-grader==7.0.0
+    - jupyter>=1.1
+    - jupyterlab>=4
+    - nbconvert>=7
+    - nbformat>=5
